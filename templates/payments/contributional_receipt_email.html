@@ -1,0 +1,18 @@
+{% autoescape off %}
+
+Hi {{ member.first_name }},
+
+Please be informed that your contribution made to {{ user }} has successfully been received to {{ member.organisation }}.
+
+Attached is your receipt. Kindly verify the details and reach out to the Administrator of the {{ member.organisation }} who recently updated your contribution.
+
+Admin Name: {{ user }}
+Email: {{ user.email }}
+Contribution Organisation: {{ member.organisation }}
+Phone Number: {{ user.phone_number }}
+
+Use the below link to view the website/platform initiated from.
+
+Link:
+http://{{ domain }}{% url 'login' %}
+{% endautoescape %}

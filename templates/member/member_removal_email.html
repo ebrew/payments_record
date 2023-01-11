@@ -1,0 +1,16 @@
+{% autoescape off %}
+
+Hi {{ member.first_name }},
+
+Sorry!
+
+Your Account has been deactivated by Admin ({{ user }}); You have been removed from {{ member.organisation}}.
+
+We are sorry for the inconvenience caused. For any enquiry. Kindly contact Admin @:
+
+Admin Name: {{ user }}
+Email: {{ user.email }}
+Contribution Organisation: {{ member.organisation }}
+Phone Number: {{ user.phone_number }}
+
+{% endautoescape %}

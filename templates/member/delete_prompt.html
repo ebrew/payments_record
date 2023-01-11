@@ -1,0 +1,23 @@
+{% extends 'crispy_base.html' %}
+{% block content %}
+<br>
+    <div class="row">
+      <div class="col-md-6">
+          <div class="card card-body">
+             <p>Are you sure you want to DELETE the member account of "{{ item }}" from {{ item.organisation }}?</p>
+              <p>Be reminded that by confirming you agree to delete {{ item }} permanently.</p>
+              <p>"{{ item }}" will be deleted and will lose all his/her records.</p>
+
+             <form action="{% url 'delete_member' item.id%}" method="POST">
+
+                {% csrf_token %}
+                <a class="btn btn-outline-info" href="{% url 'organisational_members' item.organisation.pk %}">Cancel</a>
+
+                <button class="btn btn-outline-info" type="submit">Confirm</button>
+
+             </form>
+          </div>
+      </div>
+
+    </div>
+{% endblock %}

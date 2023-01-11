@@ -1,0 +1,131 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.80.0">
+    <title>Payment Record Management - Dashboard</title>
+ <style>
+    img{
+        width: 60px;
+    }
+</style>
+
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
+  rel="stylesheet"
+/>
+   <!-- CSS only -->
+<!--<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css"> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+ <link rel="stylesheet" type="text/css" href="{% static '/css/dashboard.css' %}">
+
+ </head>
+  {% include 'navbar.html' %}
+<body>
+  <div class="container middle">
+      <div class="row g-4">
+          <div class="col-4">
+              <div class="p-3 border bg-light" align="center">
+                  <a href="{% url 'account_options' %}"><img class="card-img-top" src="{% static 'images/USER.jpg' %}"></a>
+{#                  height may be added#}
+                  <p>
+                    <a href="{% url 'account_options' %}" style="text-decoration: none"> <h4>USER ACCOUNT</h4></a>
+                  </p>
+              </div>
+          </div>
+          <div class="col-4">
+              <div class="p-3 border bg-light" align="center">
+                  <a href="{% url 'contribution_options' %}"><img class="card-img-top" src="{% static 'images/contribution.jpg' %}"></a>
+                  <p>
+                    <a href="{% url 'contribution_options' %}" style="text-decoration: none"> <h4>CONTRIBUTION</h4></a>
+                  </p>
+              </div>
+          </div>
+          <div class="col-4">
+              <div class="p-3 border bg-light" align="center">
+                  <a href="{% url 'home' %}"><img class="card-img-top" src="{% static 'images/loan.jpg' %}"></a>
+                  <p>
+                    <a href="{% url 'home' %}" style="text-decoration: none"> <h4>LOAN MANAGEMENT</h4></a>
+                  </p>
+              </div>
+          </div>
+          <div class="col-4">
+              <div class="p-3 border bg-light" align="center">
+                  <a href="{% url 'home' %}"><img class="card-img-top" src="{% static 'images/helpdesk.jpg' %}"></a>
+                  <p>
+                    <a href="{% url 'home' %}" style="text-decoration: none"> <h4>YET TO TOUCH</h4></a>
+                  </p>
+              </div>
+          </div>
+          <div class="col-4">
+              <div class="p-3 border bg-light" align="center">
+                  <a href="{% url 'home' %}"><img class="card-img-top" src="{% static 'images/helpdesk.jpg' %}"></a>
+                  <p>
+                    <a href="{% url 'home' %}" style="text-decoration: none"> <h4>YET TO TOUCH</h4></a>
+                  </p>
+              </div>
+          </div>
+          <div class="col-4">
+              <div class="p-3 border bg-light" align="center">
+                  <a href="{% url 'home' %}"><img class="card-img-top" src="{% static 'images/helpdesk.jpg' %}"></a>
+                  <p>
+                    <a href="{% url 'home' %}" style="text-decoration: none"> <h4>YET TO TOUCH</h4></a>
+                  </p>
+              </div>
+          </div>
+          <div class="col-4">
+              <div class="p-3 border bg-light" align="center">
+                  <a href="{% url 'home' %}"><img class="card-img-top" src="{% static 'images/helpdesk.jpg' %}"></a>
+                  <p>
+                    <a href="{% url 'home' %}" style="text-decoration: none"> <h4>YET TO TOUCH</h4></a>
+                  </p>
+              </div>
+          </div>
+          <div class="col-4">
+              <div class="p-3 border bg-light" align="center">
+                  <a href="{% url 'home' %}"><img class="card-img-top" src="{% static 'images/helpdesk.jpg' %}"></a>
+                  <p>
+                    <a href="{% url 'home' %}" style="text-decoration: none"> <h4>YET TO TOUCH</h4></a>
+                  </p>
+              </div>
+          </div>
+          <div class="col-4">
+              <div class="p-3 border bg-light" align="center">
+                  <a href="{% url 'home' %}"><img class="card-img-top" src="{% static 'images/helpdesk.jpg' %}"></a>
+                  <p>
+                    <a href="{% url 'home' %}" style="text-decoration: none"> <h4>SUPPORT US</h4></a>
+                  </p>
+              </div>
+          </div>
+
+      </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <footer  id="sticky-footer" class="py-4 bg-dark text-white-50 footer">
+    <div class="container text-center">
+      <a class="navbar-link" href="#" style="color: #fff">Copyright &copy; PAYMENT RECORD MANAGEMENT 2022</a>
+    </div>
+</footer>
+
+</body>
+</html>

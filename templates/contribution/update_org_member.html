@@ -1,0 +1,18 @@
+{% extends "crispy_base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}Update Organisational Member{% endblock title %}
+{% block content %}
+    <div class="content-section">
+        <form method="post">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Update Organisational Member</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <a class="btn btn-outline-info" href="{% url 'organisational_members' org %}">Cancel</a>
+                <button class="btn btn-outline-info" type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

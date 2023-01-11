@@ -1,0 +1,20 @@
+{% autoescape off %}
+
+Hi {{ user }},
+Kindly verify the details below of a user who recently created an account.
+If you really created an account,
+Then use the below link to activate or confirm your account by clicking on the link.
+
+Name: {{ user }}
+Email: {{ user.email }}
+Phone Number: {{ user.phone_number }}
+
+Ignore the below link if you never initiated the registration.
+
+NB: By clicking on the below link, you agree to activate you account with Payment Record Management System!
+
+{#http://{{ domain }}{% url 'login' %}#}
+http://{{ domain }}{% url 'activate_account' uidb64=uid token=token %}
+{% endautoescape %}
+
+

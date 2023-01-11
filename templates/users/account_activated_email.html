@@ -1,0 +1,12 @@
+{% autoescape off %}
+
+Hi {{ user.first_name }},
+
+Congratulations!
+
+Your Account has been activated successfully!
+
+Use the below link to login:
+
+http://{{ domain }}{% url 'login' %}
+{% endautoescape %}
