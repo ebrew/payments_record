@@ -43,20 +43,6 @@ python manage.py migrate
 python manage.py loaddata "path/to/fixture/file"  eg. python manage.py loaddata "data.json"
 
 
-django-celery-beat
-===============================
-celery -A printer_support beat -l INFO  # For deeper logs use DEBUG
-
-
-Database scheduler
-celery -A printer_support beat -l INFO --scheduler django_celery_beat.schedulers:DatabaseScheduler
-
-
-For beginning and updating
-===============================
-coverage run manage.py test
-
-
 For excluding venv
 ===============================
 coverage run --omit='*/venv/*' manage.py test
@@ -80,3 +66,7 @@ python -m  pip freeze > requirements.txt
 List packages installed
 ===============================
 python -m  pip list
+
+Gathering all static files
+===============================
+python manage.py collectstatic
